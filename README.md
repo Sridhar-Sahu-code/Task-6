@@ -23,5 +23,8 @@ This project covers the following operations:
 ---
 
 ### a. Extract Month from `order_date`
-### a. Extract Month from `order_date`
-
+### b. GROUP BY `year/month`.
+### c .Use `SUM()` for revenue.
+### d. `COUNT`(DISTINCT order_id) for volume.
+### e. Use `ORDER BY` for sorting.
+### f. Limit results for specific `time periods`.
