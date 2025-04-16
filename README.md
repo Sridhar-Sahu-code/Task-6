@@ -1,28 +1,30 @@
-# 🍕 Pizza Sales SQL Practice
+# 🍕 Pizza Sales SQL Analysis
 
-This section covers SQL practice problems focused on **sales trends** using `pizza_sales.csv`. Topics include:
-
-- Date extraction (MONTH, YEAR)
-- Grouping and Aggregation
-- Filtering by time periods
-- Sorting
-- Distinct counts
+This project explores monthly trends in pizza sales using SQL queries applied to the `pizza_sales.csv` dataset. It includes analysis of revenue, order volume, and filtering by time ranges.
 
 ---
 
-## 📁 Table
+## 📦 Dataset Structure
 
-Assuming a flat structure from `pizza_sales.csv`:
+Key columns from `pizza_sales.csv`:
 
-| Column        | Type     |
-|---------------|----------|
-| order_id      | INT      |
-| order_date    | TEXT     |
-| unit_price    | DECIMAL  |
-| total_price   | DECIMAL  |
-| quantity      | INT      |
+- `order_id`: Unique identifier for each order
+- `order_date`: Date the order was placed (format: "01 January 2015")
+- `unit_price`: Price per unit
+- `total_price`: Line total (unit_price × quantity)
+- `quantity`: Number of pizzas ordered
 
 ---
 
-## ✅ SQL Tasks Covered
-- Author - Sridhar Sahu
+## 🧠 SQL Tasks
+
+This project covers the following operations:
+
+---
+
+### a. Extract Month from `order_date`
+
+```sql
+SELECT 
+  EXTRACT(MONTH FROM TO_DATE(order_date, 'DD Month YYYY')) AS month
+FROM pizza_sales;
