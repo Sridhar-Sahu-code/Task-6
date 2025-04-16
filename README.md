@@ -23,8 +23,5 @@ This project covers the following operations:
 ---
 
 ### a. Extract Month from `order_date`
+### a. Extract Month from `order_date`
 
-```sql
-SELECT 
-  EXTRACT(MONTH FROM TO_DATE(order_date, 'DD Month YYYY')) AS month
-FROM pizza_sales;
